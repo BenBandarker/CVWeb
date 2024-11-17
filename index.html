@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Bandarker - CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ben Bandarker</h1>
+        <p>050-6584728, ben.bandarker@gmail.com</p>
+    </header>
+    <nav>
+        <ul>
+            <!-- <li><a href="#experience">Experience</a></li> -->
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    
+    <main>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>"SET" GAME</strong>
+                    <div class="image-link-container" style="display: inline-block; float: right;">
+                        <div class="image-link">
+                            <a href="https://github.com/BenBandarker/SET" target="_blank">
+                                <img src="pictures\github.jpeg" alt="github logo">
+                            </a>
+                        </div>
+                    </div>
+                    <p>•Managing Concurrency Problems</p>
+                    <p>•JAVA - Object oriented</p>
+                        <li style="text-align: left; max-width: 1000px;">For this project, we developed a Java program simulating the card game "SET" using object-oriented principles. 
+                        The implementation required designing classes and utilizing advanced Java concepts such as threads and synchronization to handle concurrency issues. 
+                        Through this, I deepened my understanding of multithreading, synchronization, and the Java Collections Framework. 
+                        Additionally, I gained valuable experience in collaborative programming, as the assignment was completed in a pair.</li>
+                    <video controls width="600">
+                        <source src="pictures\setVideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </li>
+                <li><strong>Collocation Extraction</strong>
+                    <div class="image-link-container" style="display: inline-block; float: right;">
+                        <div class="image-link">
+                            <a href="https://github.com/BenBandarker/Collocation-Extraction" target="_blank">
+                                <img src="pictures\github.jpeg" alt="github logo">
+                            </a>
+                        </div>
+                    </div>
+                    <p>•AWS- Amazon Elastic Map Reduce</p>
+                    <p>•JAVA</p>
+                    <li style="text-align: left; max-width: 1000px;">For this project, we developed a Java program that extracts collocations from a given large database using the MapReduce framework. 
+                        The implementation required designing a MapReduce job and utilizing Amazon Elastic MapReduce to process large datasets efficiently. We designed 4 steps for the MapReduce job, each with a different purpose.
+                        Through this, I deepened my understanding of distributed systems, cloud computing, and the MapReduce paradigm. 
+                        Additionally, I gained valuable experience in working with big data and utilizing cloud services (AWS) to optimize performance.</li>
+                        
+                        <div class="image-row">
+                            <div class="image-container">
+                                <img src="pictures\collocationCode1.png" alt="Description 1">
+                                <p>Main program, setting Job flow and steps.</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="pictures\collocationCode2.png" alt="Description 2">
+                                <p>Main program, setting Job flow and steps. Part 2.</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="pictures\step1code.png" alt="Description 3">
+                                <p>Step 1, Mapper and Reducer.</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="pictures\step2code.png" alt="Description 4">
+                                <p>Step 2, Mapper and Reducer.</p>
+                            </div>
+                        </div>
+                </li>
+                <li><strong> Sarcasm Analysis</strong>
+                    <div class="image-link-container" style="display: inline-block; float: right;">
+                        <div class="image-link">
+                            <a href="https://github.com/BenBandarker/Sarcasm-Analysis" target="_blank">
+                                <img src="pictures\github.jpeg" alt="github logo">
+                            </a>
+                        </div>
+                    </div>
+                    <p>•AWS- S3, Sqs, EC2</p>
+                        <p>•JAVA- Object oriented</p>
+                        <li style="text-align: left; max-width: 1000px;">For this project, we developed a Java program that parses sarcasm in comments using the Amazon Web Services (AWS) platform.
+                        The implementation required designing a distributed system and using AWS services such as S3, SQS, and EC2 to efficiently process and analyze large data sets. The project was built in three parts: administrator, client, and worker. The ultimate goal is for everyone to work together.
+                        Through this, I deepened my understanding of cloud computing, distributed systems, and the AWS ecosystem.
+                        In addition, I gained valuable experience working with big data and using cloud services to optimize performance.</li>
+                        <div class="image-row">
+                            <div class="image-container">
+                                <img src="pictures\SarcasmLocalAppMain.png" alt="Description 1">
+                                <p>Local App main program, The local app has 8 steps to take, from waking up the Manager to closing his private resources.</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="pictures\SarcasmManagerMain.png" alt="Description 2">
+                                <p>Manager main program, The manager is divided into different threads that work in parallel, there are threads that work with local apps and threads that work with workers.</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="pictures\SarcasmWorkerMain.png" alt="Description 3">
+                                <p>Worker main program, the main loop, receiving messages, decoding, processing according to requirements, and sending results.</p>
+                            </div>
+                        </div>
+                </li>
+                <li><strong>Election Project</strong>
+                    <p>•Memory Management. Dynamic and Static</p>
+                    <p>•C++</p>
+                    <li style="text-align: left; max-width: 1000px;">For this project, we developed a C++ program simulating a coalition formation process among political parties using object-oriented principles.
+                         The implementation required designing classes and utilizing advanced C++ concepts such as the Rule of 5 to handle memory efficiently. 
+                         Through this, I deepened my understanding of graph-based data structures, memory management, and strategy pattern application. 
+                         Additionally, I gained valuable experience in collaborative programming, as the assignment was completed in a pair.
+                    </li>
+                    <!-- <video controls width="600">
+                        <source src="path/to/your/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> -->
+                </li>
+            </ul>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>B.Sc Computer Science,</strong> Ben Gurion University, 2022-2024.
+                    <div class="image-link-container" style="display: inline-block; float: right;">
+                        <div class="image-link">
+                            <a href="https://www.bgu.ac.il/" target="_blank">
+                                <img src="pictures\bengurlogo.jpeg" alt="BenGurion logo">
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li style="text-align: left; max-width: 1000px;">During my B.Sc. in Computer Science at Ben-Gurion University,
+                    I developed strong skills in data structures, algorithms and database management,
+                    alongside advanced topics like machine learning, distributed systems, and cloud computing. 
+                    Proficient in programming languages such as Java, Python, and JavaScript, and tools like AWS, Git, and Linux,
+                    I equipped myself with the ability to adapt to modern development environments. 
+                    Throughout my degree, I also cultivated a habit of continuous learning and research, consistently diving into unfamiliar concepts and technologies to expand my knowledge and problem-solving capabilities.</li>
+            </ul>
+            
+            <ul>
+                <li><strong> "Moshal" Program Member,</strong>  "Moshal" Program, 2022-2024.
+                    <div class="image-link-container" style="display: inline-block; float: right;">
+                        <div class="image-link">
+                            <a href="https://moshalprogram.org.il/" target="_blank">
+                                <img src="pictures\moshalLogo.png" alt="Moshal logo">
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li style="text-align: left; max-width: 1000px;">Selected to take part in an unique international
+                    program that empowers ambitious and
+                    talented undergraduate students with high
+                    academic potential, equipping them with
+                    cutting-edge tools and a versatile skill set to
+                    foster growth both personally and
+                    professionally.</li>
+            </ul>
+            <!-- <h3>Sample Courses</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Introduction to Computer Science</th>
+                        <th>Data Structures</th>
+                        <th>Design of Algorithms</th>
+                        <th>extended System Programming Laboratory</th>
+                        <th>Principles of Programming Languages</th>
+                        <th>Distributed System Programming</th>
+                        <th>Principles of Computer Science</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grade</td>
+                        <td>93</td>
+                        <td>85</td>
+                        <td>85</td>
+                        <td>88</td>
+                        <td>93</td>
+                        <td>87</td>
+                        <td>86</td>
+                    </tr>
+                </tbody>
+            </table> -->
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <strong>Programming Languages:</strong>
+                <p>Java, C++, C, Python, JavaScript, TypeScript.</p>
+            <strong>Technical Tools:</strong>
+                <p>AWS, Github, Linux.</p>
+            <strong>Technical Skills:</strong>
+                <p>OOP, Data Structures, Algorithms, Database Management, Cloud Computing and Map-Reduce, Testing and Debugging.</p>
+        </section>
+        <section id="about">
+            <div class="profile">
+                <h2>About Me</h2>
+                <img src="pictures\Me.jpeg" alt="Ben Bandarker">
+                <h3>Ben Bandarker</h3>
+                <p>B.Sc in Computer Science, Ben Gurion University.
+                    <br>27 years old.
+                    <br>I am a Self-Learner, Team-Worker, Interpersonal communication person. 
+                    <br>As a student in BGU, I was chosen to be 
+                    <span class="tooltip-container">"Moshal" Program
+                        <span class="tooltip">Unique international
+                            program that empowers ambitious and
+                            talented undergraduate students with high
+                            academic potential, equipping them with
+                            cutting-edge tools and a versatile skill set to
+                            foster growth both personally and
+                            professionally.</span>
+                    </span>
+                    Member.
+                    <br>I served in the Givati ​​Brigade, in the years 2016-2018, as a fighter and commander.
+                    <br><strong>Looking to integrate into a junior position.</strong>
+                </p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Phone: 050-6584728</p>
+            <p>Email: ben.bandarker@gmail.com</p>
+            <div class="image-link-container">
+                <div class="image-link">
+                    <a href="https://www.linkedin.com/in/benbandarker/" target="_blank">
+                        <img src="pictures\Linkedin.png" alt="Linkedin logo">
+                    </a>
+                </div>
+                <div class="image-link">
+                    <a href="https://github.com/BenBandarker/" target="_blank">
+                        <img src="pictures\github.jpeg" alt="Github logo">
+                    </a>
+                </div>
+            </div>
+            <!-- <p><a href="https://www.linkedin.com/in/benbandarker/">Linkedin</a></p>
+            <p><a href="https://github.com/BenBandarker/">Github</a></p> -->
+            <p><br></p>
+        </section>
+    </main>
+    <!-- <footer>
+        <p>&copy; 2024 Ben Bandarker. All rights reserved.</p>
+    </footer> -->
+</body>
+</html>
