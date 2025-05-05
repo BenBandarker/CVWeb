@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ben Bandarker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header style="position: relative; height: 100vh; background-image: url('pictures/background.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: scroll; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center;">
+        <div style="background-color: rgba(0,0,0,0.6); padding: 2rem; border-radius: 12px; max-width: 90%;">
+          <h1 style="font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;">Junior Software Engineer | Junior Backend Developer | Open to Junior Developer Roles</h1>
+          <p style="font-size: 1.5rem; font-weight: 500;"> 050-6584728 · <a href="mailto:ben.bandarker@gmail.com" style="color: #93c5fd; text-decoration: underline;">ben.bandarker@gmail.com</a></p>
+          <p style="margin-top: 0.5rem;">
+            <a href="https://www.linkedin.com/in/benbandarker" target="_blank" style="color: #93c5fd; font-weight: 600;">LinkedIn</a> |
+            <a href="https://github.com/BenBandarker" target="_blank" style="color: #93c5fd; font-weight: 600;">GitHub</a> |
+            <a href="https://www.benbandarker.com" target="_blank" style="color: #93c5fd; font-weight: 600;">Portfolio</a>
+          </p>
+          <a href="BEN-BANDARKER-CV.pdf" class="download-btn" download style="margin-top: 1.5rem; background-color: #3b82f6; padding: 0.75rem 1.5rem; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">Download CV</a>
+        </div>
+      </header>
+  <nav>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        ScrollReveal().reveal("section", {
+          distance: "50px",
+          duration: 800,
+          easing: "ease-out",
+          origin: "bottom",
+          interval: 150
+        });
+      });
+    </script>
+  
+    <!-- <section class="intro-banner" style="position: relative; height: 100vh; background: url('pictures/background.png') center/cover no-repeat fixed; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center;">
+        <div style="background-color: rgba(0,0,0,0.6); padding: 2rem; border-radius: 12px;">
+          <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem;">Ben Bandarker</h1>
+          <p style="font-size: 1.5rem; font-weight: 500;">Software Engineer · 050-6584728 · <a href="mailto:ben.bandarker@gmail.com" style="color: #93c5fd; text-decoration: underline;">ben.bandarker@gmail.com</a></p>
+          <p style="margin-top: 0.5rem;">
+            <a href="https://www.linkedin.com/in/benbandarker" target="_blank" style="color: #93c5fd; font-weight: 600;">LinkedIn</a> |
+            <a href="https://github.com/BenBandarker" target="_blank" style="color: #93c5fd; font-weight: 600;">GitHub</a> |
+            <a href="https://www.benbandarker.com" target="_blank" style="color: #93c5fd; font-weight: 600;">Portfolio</a>
+          </p>
+          <a href="BEN-BANDARKER-CV.pdf" class="download-btn" download style="margin-top: 1.5rem; background-color: #3b82f6; padding: 0.75rem 1.5rem; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">Download CV</a>
+        </div>
+      </section> -->
+      
+  
+      <style>
+        .project-media-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          justify-content: center;
+        }
+        .project-media {
+          height: 300px;
+          object-fit: cover;
+          border-radius: 8px;
+          transition: transform 0.3s ease, z-index 0.3s;
+        }
+        .project-media:hover {
+          transform: scale(2);
+          z-index: 10;
+          object-fit: contain;
+        }
+        .project-video {
+          width: 50%;
+          border-radius: 8px;
+          transition: transform 0.3s ease;
+        }
+        .project-video:hover {
+          transform: scale(1.5);
+          z-index: 10;
+        }
+        .github-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 4px;
+            vertical-align: middle;
+          }
+      </style>
+      
+      <section id="projects" style="padding: 2rem;">
+        <h2>Projects</h2>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+          <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+            <h3>Football Insight Hub</h3>
+            <p><strong>Technologies:</strong> Node.js, Express.js, MySQL</p>
+            <p>Developed a backend system for managing and querying real-time football data with custom filtering and validation logic. Built RESTful APIs with modular architecture and MySQL integration.</p>
+            <p><a href="https://github.com/BenBandarker/footballStatsPro" target="_blank"><img src="pictures/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
+        </div>
+          <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+            <h3>Sarcasm Analysis</h3>
+            <div class="project-media-wrapper">
+              <img src="pictures/SarcasmManagerMain.png" alt="Sarcasm Manager" class="project-media">
+              <img src="pictures/SarcasmLocalAppMain.png" alt="Sarcasm Local App" class="project-media">
+              <img src="pictures/SarcasmWorkerMain.png" alt="Sarcasm Worker" class="project-media">
+            </div>
+            <p><strong>Technologies:</strong> Java, AWS (S3, EC2, SQS)</p>
+            <p>Built a distributed Java application to analyze sarcasm in Amazon reviews using NLP and cloud-based processing pipelines with AWS services.</p>
+            <p><a href="https://github.com/BenBandarker/Sarcasm-Analysis" target="_blank"><img src="pictures/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
+        </div>
+          <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+            <h3>Collocation Extraction</h3>
+            <div class="project-media-wrapper">
+              <img src="pictures/collocationCode1.png" alt="Collocation 1" class="project-media">
+              <img src="pictures/collocationCode2.png" alt="Collocation 2" class="project-media">
+              <img src="pictures/step1code.png" alt="Collocation 3" class="project-media">
+              <img src="pictures/step2code.png" alt="Collocation 4" class="project-media">
+            </div>
+            <p><strong>Technologies:</strong> Java, Hadoop, AWS EMR</p>
+            <p>Analyzed large-scale language data (Google 2gram) using MapReduce jobs on AWS EMR to extract meaningful word pairings with PMI scoring.</p>
+            <p><a href="https://github.com/BenBandarker/Collocation-Extraction" target="_blank"><img src="pictures/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
+        </div>
+          <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+            <h3>SET Game (Multithreaded)</h3>
+            <div style="text-align: center;">
+              <video src="pictures/setVideo.mp4" controls class="project-video"></video>
+            </div>
+            <p><strong>Technologies:</strong> Java</p>
+            <p>Simulated the SET card game with a concurrent, multithreaded design in Java using synchronization and object-oriented principles.</p>
+            <p><a href="https://github.com/BenBandarker/SET" target="_blank"><img src="pictures/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
+        </div>
+        </div>
+      </section>
+      
+  
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>B.Sc in Computer Science,</strong> Ben Gurion University, 2021–2024</p>
+      <p>Courses: Data Structures, Algorithms, Distributed Systems, Cloud Computing, and Machine Learning. Gained practical experience in software development, backend systems, and cloud-based architectures.</p>
+      <p><strong>Moshal Program</strong> – Selected to join an elite international leadership and academic development program for talented students.</p>
+    </section>
+  
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+        <div>
+          <h4>🧠 Languages</h4>
+          <ul style="list-style: disc; margin-left: 1.2rem;">
+            <li>Java</li>
+            <li>C++</li>
+            <li>C</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+          </ul>
+        </div>
+        <div>
+          <h4>🛠️ Frameworks & Tools</h4>
+          <ul style="list-style: disc; margin-left: 1.2rem;">
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>MySQL</li>
+            <li>Git</li>
+            <li>Linux</li>
+            <li>AWS (EC2, S3, SQS, EMR)</li>
+          </ul>
+        </div>
+        <div>
+          <h4>📚 Core Concepts</h4>
+          <ul style="list-style: disc; margin-left: 1.2rem;">
+            <li>OOP</li>
+            <li>Data Structures</li>
+            <li>Algorithms</li>
+            <li>REST API</li>
+            <li>Cloud Computing</li>
+            <li>Map-Reduce</li>
+          </ul>
+        </div>
+        <div>
+          <h4>🧪 Testing & Debugging</h4>
+          <ul style="list-style: disc; margin-left: 1.2rem;">
+            <li>Unit Testing</li>
+            <li>Debugging Techniques</li>
+            <li>Code Reviews</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I’m a Computer Science graduate and passionate backend developer who enjoys building scalable and well-structured systems. I thrive in collaborative environments, write clean code, and constantly explore new technologies. I'm open to roles in Backend, Full Stack, Data Engineering, or Software Development, where I can contribute and grow professionally.</p>
+    </section>
+  
+    <section id="contact">
+        <h2>Contact</h2>
+        <p><strong>Phone:</strong> 050-6584728</p>
+        <p><strong>Email:</strong> <a href="mailto:ben.bandarker@gmail.com">ben.bandarker@gmail.com</a></p>
+        <p>
+          <a href="https://linkedin.com/in/benbandarker" target="_blank" style="color: #1d4ed8; font-weight: 500;">LinkedIn</a> |
+          <a href="https://github.com/BenBandarker" target="_blank" style="color: #1d4ed8; font-weight: 500;">GitHub</a> 
+          <!-- <a href="https://www.benbandarker.com" target="_blank" style="color: #1d4ed8; font-weight: 500;">Portfolio</a> -->
+        </p>
+      </section>
+    
+      <div style="text-align: center; padding: 2rem;">
+        <a href="#top" style="display: inline-block; padding: 0.75rem 1.5rem; background-color: #3b82f6; color: #fff; border-radius: 8px; text-decoration: none; font-weight: bold;">⬆ Back to Top</a>
+      </div>
+    </main>
+</body>
+</html>

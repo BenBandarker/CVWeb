@@ -1,261 +1,237 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Bandarker</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ben Bandarker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Ben Bandarker</h1>
-        <p>050-6584728, ben.bandarker@gmail.com</p>
-    </header>
-    <nav>
-        <ul>
-            <!-- <li><a href="#experience">Experience</a></li> -->
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    
-    <main>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li id="setproject"><strong>"SET" GAME</strong>
-                    <div class="image-link-container" style="display: inline-block; float: right;">
-                        <div class="image-link">
-                            <a href="https://github.com/BenBandarker/SET" target="_blank">
-                                <img src="pictures\github.jpeg" alt="github logo">
-                            </a>
-                        </div>
-                    </div>
-                    <p>•Managing Concurrency Problems</p>
-                    <p>•JAVA - Object oriented</p>
-                        <li style="text-align: left; max-width: 1000px;"><strong>Description:</strong>
-                            For this project, we developed a Java program simulating the card game "SET" using object-oriented principles. 
-                            The implementation required designing well-structured classes and utilizing advanced Java concepts, including threads and synchronization, to handle concurrency issues effectively. 
-                            The program also incorporated the Java Collections Framework for efficient data management and processing. </li>                         
-                            <li style="text-align: left; max-width: 1000px;"><strong>Achievements:</strong>
-                            Through this project, I deepened my understanding of multithreading, synchronization, and the Java Collections Framework. I also honed my problem-solving skills by addressing concurrency challenges and gained valuable experience in collaborative programming, as the assignment was completed in a pair. This enhanced my ability to communicate effectively and work as part of a team.</li>
-                    <video controls width="600">
-                        <source src="pictures\setVideo.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </li>
-                <li id="collocationExtraction"><strong>Collocation Extraction</strong>
-                    <div class="image-link-container" style="display: inline-block; float: right;">
-                        <div class="image-link">
-                            <a href="https://github.com/BenBandarker/Collocation-Extraction" target="_blank">
-                                <img src="pictures\github.jpeg" alt="github logo">
-                            </a>
-                        </div>
-                    </div>
-                    <p>•AWS- Amazon Elastic Map Reduce</p>
-                    <p>•JAVA</p>
-                    <li style="text-align: left; max-width: 1000px;"><strong>Description:</strong>
-                        For this project, we developed a Java program to extract collocations from a large database using the MapReduce framework. The implementation involved designing and executing a four-step MapReduce job on Amazon Elastic MapReduce (AWS EMR) to process and analyze the Google 2gram dataset efficiently. Each step in the process had a specific purpose to ensure accurate and meaningful results, such as extracting collocations and calculating normalized PMI.</li>                         
-                        <li style="text-align: left; max-width: 1000px;"><strong>Achievements:</strong>
-                            Through this project, I successfully processed a large dataset and deepened my understanding of distributed systems, cloud computing, and the MapReduce paradigm. I gained hands-on experience in working with big data and utilizing AWS cloud services to optimize performance, enhancing my knowledge of distributed programming and cloud-based data processing.</li>
-                
-                        <div class="image-row">
-                            <div class="image-container">
-                                <img src="pictures\collocationCode1.png" alt="Description 1">
-                                <p>Main program, setting Job flow and steps.</p>
-                            </div>
-                            <div class="image-container">
-                                <img src="pictures\collocationCode2.png" alt="Description 2">
-                                <p>Main program, setting Job flow and steps. Part 2.</p>
-                            </div>
-                            <div class="image-container">
-                                <img src="pictures\step1code.png" alt="Description 3">
-                                <p>Step 1, Mapper and Reducer.</p>
-                            </div>
-                            <div class="image-container">
-                                <img src="pictures\step2code.png" alt="Description 4">
-                                <p>Step 2, Mapper and Reducer.</p>
-                            </div>
-                        </div>
-                </li>
-                <li id="sarcasmAnalysis"><strong> Sarcasm Analysis</strong>
-                    <div class="image-link-container" style="display: inline-block; float: right;">
-                        <div class="image-link">
-                            <a href="https://github.com/BenBandarker/Sarcasm-Analysis" target="_blank">
-                                <img src="pictures\github.jpeg" alt="github logo">
-                            </a>
-                        </div>
-                    </div>
-                    <p>•AWS- S3, Sqs, EC2</p>
-                        <p>•JAVA- Object oriented</p>
-                        <li style="text-align: left; max-width: 1000px;"><strong>Description:</strong>
-                            For this project, we developed a Java program to parse sarcasm in comments using the Amazon Web Services (AWS) platform. 
-                            The implementation involved designing a distributed system composed of three parts— Manager, Client, and Worker- that collaborated to serve as an application for processing and analyzing large datasets. 
-                            AWS services, including S3 for storage, SQS for message queuing, and EC2 for computation, were utilized to ensure efficient processing and seamless system operation. 
-                            Sentiment analysis and named entity recognition tools were applied to the data for accurate results.</li>                         
-                            <li style="text-align: left; max-width: 1000px;"><strong>Achievements:</strong>
-                                I successfully designed and implemented a distributed system for processing a large database of Amazon reviews. 
-                                This project deepened my understanding of cloud computing, distributed systems, and the AWS ecosystem, while also providing hands-on experience with AWS services such as EC2, SQS, and S3. 
-                                Additionally, I enhanced my ability to integrate object-oriented principles in building robust and scalable applications.</li>
-                            <div class="image-row">
-                            <div class="image-container">
-                                <img src="pictures\SarcasmLocalAppMain.png" alt="Description 1">
-                                <p>Local App main program, The local app has 8 steps to take, from waking up the Manager to closing his private resources.</p>
-                            </div>
-                            <div class="image-container">
-                                <img src="pictures\SarcasmManagerMain.png" alt="Description 2">
-                                <p>Manager main program, The manager is divided into different threads that work in parallel, there are threads that work with local apps and threads that work with workers.</p>
-                            </div>
-                            <div class="image-container">
-                                <img src="pictures\SarcasmWorkerMain.png" alt="Description 3">
-                                <p>Worker main program, the main loop, receiving messages, decoding, processing according to requirements, and sending results.</p>
-                            </div>
-                        </div>
-                </li>
-                <li id="electionProject"><strong>Election Project</strong>
-                    <p>•Memory Management. Dynamic and Static</p>
-                    <p>•C++</p>
-                    <li style="text-align: left; max-width: 1000px;"><strong>Description:</strong>
-                        For this project, we developed a C++ program that simulates a coalition formation process among political parties using object-oriented principles. 
-                        The implementation involved designing an election simulation system, leveraging advanced C++ features such as the Rule of 5 to manage memory efficiently. 
-                        Graph-based data structures were utilized to represent relationships and strategies between parties, while the strategy pattern ensured flexibility in decision-making.</li>                         
-                        <li style="text-align: left; max-width: 1000px;"><strong>Achievements:</strong>
-                            I successfully designed and implemented a system that simulates elections and coalition formation, deepening my understanding of memory management in C++ and techniques to avoid memory leaks. 
-                            Additionally, this project enhanced my knowledge of graph-based data structures and advanced object-oriented programming concepts, while providing valuable collaborative programming experience as part of a pair project.</li>
-                
-                    <!-- <video controls width="600">
-                        <source src="path/to/your/video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video> -->
-                </li>
-            </ul>
-        </section>
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>B.Sc Computer Science,</strong> Ben Gurion University, 2022-2024.
-                    <div class="image-link-container" style="display: inline-block; float: right;">
-                        <div class="image-link">
-                            <a href="https://www.bgu.ac.il/" target="_blank">
-                                <img src="pictures\bengurlogo.jpeg" alt="BenGurion logo">
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li style="text-align: left; max-width: 1000px;">During my B.Sc. in Computer Science at Ben-Gurion University,
-                    I developed strong skills in data structures, algorithms and database management,
-                    alongside advanced topics like machine learning, distributed systems, and cloud computing. 
-                    Proficient in programming languages such as Java, Python, and JavaScript, and tools like AWS, Git, and Linux,
-                    I equipped myself with the ability to adapt to modern development environments. 
-                    Throughout my degree, I also cultivated a habit of continuous learning and research, consistently diving into unfamiliar concepts and technologies to expand my knowledge and problem-solving capabilities.</li>
-            </ul>
-            
-            <ul>
-                <li><strong> "Moshal" Program Member,</strong>  "Moshal" Program, 2022-2024.
-                    <div class="image-link-container" style="display: inline-block; float: right;">
-                        <div class="image-link">
-                            <a href="https://moshalprogram.org.il/" target="_blank">
-                                <img src="pictures\moshalLogo.png" alt="Moshal logo">
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li style="text-align: left; max-width: 1000px;">Selected to take part in an unique international
-                    program that empowers ambitious and
-                    talented undergraduate students with high
-                    academic potential, equipping them with
-                    cutting-edge tools and a versatile skill set to
-                    foster growth both personally and
-                    professionally.</li>
-            </ul>
-            <!-- <h3>Sample Courses</h3>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Course</th>
-                        <th>Introduction to Computer Science</th>
-                        <th>Data Structures</th>
-                        <th>Design of Algorithms</th>
-                        <th>extended System Programming Laboratory</th>
-                        <th>Principles of Programming Languages</th>
-                        <th>Distributed System Programming</th>
-                        <th>Principles of Computer Science</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Grade</td>
-                        <td>93</td>
-                        <td>85</td>
-                        <td>85</td>
-                        <td>88</td>
-                        <td>93</td>
-                        <td>87</td>
-                        <td>86</td>
-                    </tr>
-                </tbody>
-            </table> -->
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <strong>Programming Languages:</strong>
-                <p>Java, C++, C, Python, JavaScript, TypeScript.</p>
-            <strong>Technical Tools:</strong>
-                <p>AWS, Github, Linux.</p>
-            <strong>Technical Skills:</strong>
-                <p>OOP, Data Structures, Algorithms, Database Management, Cloud Computing and Map-Reduce, Testing and Debugging.</p>
-        </section>
-        <section id="about">
-            <div class="profile">
-                <h2>About Me</h2>
-                <img src="pictures\Me.jpeg" alt="Ben Bandarker">
-                <h3>Ben Bandarker</h3>
-                <p>B.Sc in Computer Science, Ben Gurion University.
-                    <br>27 years old.
-                    <br>I am a Self-Learner, Team-Worker, Interpersonal communication person. 
-                    <br>As a student in BGU, I was chosen to be 
-                    <span class="tooltip-container">"Moshal" Program
-                        <span class="tooltip">Unique international
-                            program that empowers ambitious and
-                            talented undergraduate students with high
-                            academic potential, equipping them with
-                            cutting-edge tools and a versatile skill set to
-                            foster growth both personally and
-                            professionally.</span>
-                    </span>
-                    Member.
-                    <br>I served in the Givati ​​Brigade, in the years 2016-2018, as a fighter and commander.
-                    <br><strong>Looking to integrate into a junior position.</strong>
-                </p>
+    <header style="position: relative; height: 100vh; background-image: url('pictures/background.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: scroll; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center;">
+        <h1 style="font-size: 6.5rem; font-weight: 100; margin-bottom: 0.5rem;  color: #cccccc;">Ben Bandarker</h1>
+        <p style="font-size: 4.5rem; font-weight: 500;  color: #cccccc;">Software Engineer </p>
+        <div style="background-color: rgba(0,0,0,0.6); padding: 2rem; border-radius: 12px; max-width: 90%;">
+          <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;">Junior Software Engineer | Junior Backend Developer | Open to Junior Developer Roles</h1>
+          <p style="font-size: 1.5rem; font-weight: 500;"> 050-6584728 · <a href="mailto:ben.bandarker@gmail.com" style="color: #93c5fd; text-decoration: underline;">ben.bandarker@gmail.com</a></p>
+          <p style="margin-top: 0.5rem;">
+            <a href="https://www.linkedin.com/in/benbandarker" target="_blank" style="color: #93c5fd; font-weight: 600;">LinkedIn</a> |
+            <a href="https://github.com/BenBandarker" target="_blank" style="color: #93c5fd; font-weight: 600;">GitHub</a> |
+            <a href="https://www.benbandarker.com" target="_blank" style="color: #93c5fd; font-weight: 600;">Portfolio</a>
+          </p>
+          <a href="BEN-BANDARKER-CV.pdf" class="download-btn" download style="margin-top: 1.5rem; background-color: #3b82f6; padding: 0.75rem 1.5rem; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">Download CV</a>
+        </div>
+      </header>
+  <nav>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        ScrollReveal().reveal("section", {
+          distance: "50px",
+          duration: 800,
+          easing: "ease-out",
+          origin: "bottom",
+          interval: 150
+        });
+      });
+    </script>
+  
+    <!-- <section class="intro-banner" style="position: relative; height: 100vh; background: url('pictures/background.png') center/cover no-repeat fixed; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center;">
+        <div style="background-color: rgba(0,0,0,0.6); padding: 2rem; border-radius: 12px;">
+          <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem;">Ben Bandarker</h1>
+          <p style="font-size: 1.5rem; font-weight: 500;">Software Engineer · 050-6584728 · <a href="mailto:ben.bandarker@gmail.com" style="color: #93c5fd; text-decoration: underline;">ben.bandarker@gmail.com</a></p>
+          <p style="margin-top: 0.5rem;">
+            <a href="https://www.linkedin.com/in/benbandarker" target="_blank" style="color: #93c5fd; font-weight: 600;">LinkedIn</a> |
+            <a href="https://github.com/BenBandarker" target="_blank" style="color: #93c5fd; font-weight: 600;">GitHub</a> |
+            <a href="https://www.benbandarker.com" target="_blank" style="color: #93c5fd; font-weight: 600;">Portfolio</a>
+          </p>
+          <a href="BEN-BANDARKER-CV.pdf" class="download-btn" download style="margin-top: 1.5rem; background-color: #3b82f6; padding: 0.75rem 1.5rem; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">Download CV</a>
+        </div>
+      </section> -->
+      
+  
+      <style>
+        .project-media-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          justify-content: center;
+        }
+        .project-media {
+          height: 300px;
+          object-fit: cover;
+          border-radius: 8px;
+          transition: transform 0.3s ease, z-index 0.3s;
+        }
+        .project-media:hover {
+          transform: scale(2);
+          z-index: 10;
+          object-fit: contain;
+        }
+        .project-video {
+          width: 50%;
+          border-radius: 8px;
+          transition: transform 0.3s ease;
+        }
+        .project-video:hover {
+          transform: scale(1.5);
+          z-index: 10;
+        }
+        .github-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 4px;
+            vertical-align: middle;
+          }
+        .info-section {
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 1.5rem;
+        background-color: #fff;
+        margin-bottom: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        }
+      </style>
+      
+      <section id="projects" style="padding: 2rem;">
+        <h2>Projects</h2>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+          <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+            <h3>Football Insight Hub</h3>
+            <p><strong>Technologies:</strong> Node.js, Express.js, MySQL</p>
+            <p>Developed a scalable backend system to manage and query real-time football statistics. </p>
+            <p>I designed and implemented RESTful APIs with robust validation and filtering logic using a modular Node.js and Express.js architecture connected to a MySQL database.</p>
+            <p></p>This resulted in a clean and efficient system that supports fast data exploration and reliable access to team, match, and player insights.</p>
+            <p><a href="https://github.com/BenBandarker/footballStatsPro" target="_blank"><img src="pictures/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
+        </div>
+          <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+            <h3>Sarcasm Analysis</h3>
+            <div class="project-media-wrapper">
+              <img src="pictures/SarcasmManagerMain.png" alt="Sarcasm Manager" class="project-media">
+              <img src="pictures/SarcasmLocalAppMain.png" alt="Sarcasm Local App" class="project-media">
+              <img src="pictures/SarcasmWorkerMain.png" alt="Sarcasm Worker" class="project-media">
             </div>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Phone: 050-6584728</p>
-            <p>Email: ben.bandarker@gmail.com</p>
-            <div class="image-link-container">
-                <div class="image-link">
-                    <a href="https://www.linkedin.com/in/benbandarker/" target="_blank">
-                        <img src="pictures\Linkedin.png" alt="Linkedin logo">
-                    </a>
-                </div>
-                <div class="image-link">
-                    <a href="https://github.com/BenBandarker/" target="_blank">
-                        <img src="pictures\github.jpeg" alt="Github logo">
-                    </a>
-                </div>
+            <p><strong>Technologies:</strong> Java, AWS (S3, EC2, SQS)</p>
+            <p>Built a distributed Java application that analyzes sarcasm in Amazon reviews using NLP techniques and AWS cloud services. </p>
+            <p>The system leveraged S3 for data storage, EC2 for computation, and SQS for asynchronous messaging. </p>
+            <p>I designed a producer-consumer architecture that enabled scalable parallel processing, resulting in efficient and reliable sarcasm classification across large datasets.</p>
+            <p><a href="https://github.com/BenBandarker/Sarcasm-Analysis" target="_blank"><img src="pictures/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
+        </div>
+          <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+            <h3>Collocation Extraction</h3>
+            <div class="project-media-wrapper">
+              <img src="pictures/collocationCode1.png" alt="Collocation 1" class="project-media">
+              <img src="pictures/collocationCode2.png" alt="Collocation 2" class="project-media">
+              <img src="pictures/step1code.png" alt="Collocation 3" class="project-media">
+              <img src="pictures/step2code.png" alt="Collocation 4" class="project-media">
             </div>
-            <!-- <p><a href="https://www.linkedin.com/in/benbandarker/">Linkedin</a></p>
-            <p><a href="https://github.com/BenBandarker/">Github</a></p> -->
-            <p><br></p>
-        </section>
-    </main>
-    <!-- <footer>
-        <p>&copy; 2024 Ben Bandarker. All rights reserved.</p>
-    </footer> -->
-</body>
-</html>
+            <p><strong>Technologies:</strong> Java, Hadoop, AWS EMR</p>
+            <p>Processed massive linguistic datasets using MapReduce to identify word pairings based on statistical significance. </p>
+            <p>I built a Hadoop pipeline in Java and deployed it on AWS EMR to analyze Google 2-gram data, computing PMI scores to extract meaningful collocations. </p>
+            <p>The result was a high-performance, cost-effective solution for large-scale linguistic analysis.</p>
+            <p><a href="https://github.com/BenBandarker/Collocation-Extraction" target="_blank"><img src="pictures/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
+        </div>
+          <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+            <h3>SET Game (Multithreaded)</h3>
+            <div style="text-align: center;">
+              <video src="pictures/setVideo.mp4" controls class="project-video"></video>
+            </div>
+            <p><strong>Technologies:</strong> Java</p>
+            <p>Simulated the SET card game using Java with a fully concurrent architecture. </p>
+            <p>I applied object-oriented design and multithreading principles to manage real-time gameplay logic, synchronize player threads, and handle edge cases.</p> 
+            <p>This project demonstrates my ability to design interactive systems with complex concurrency and correctness requirements.</p>
+            <p><a href="https://github.com/BenBandarker/SET" target="_blank"><img src="pictures/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
+        </div>
+        </div>
+      </section>
+      
+  
+      <section id="education" style="padding: 2rem;">
+        <h2>Education</h2>
+        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+        <p><strong>B.Sc in Computer Science,</strong> Ben Gurion University, 2021–2024</p>
+        <p><strong>Courses:</strong> Data Structures, Algorithms, Distributed Systems, Cloud Computing, Machine Learning</p>
+        <p><strong>Achievements:</strong> Gained hands-on experience in backend systems, selected for Moshal Program (elite leadership program)</p>
+            </div>
+    </section>
+      
+    <section id="skills" style="padding: 2rem;">
+        <h2>Skills</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+          <div style="flex: 1 1 240px; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+            <h4>🧠 Languages</h4>
+            <ul style="list-style: disc; margin-left: 1.2rem;">
+              <li>Java</li>
+              <li>C++</li>
+              <li>C</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+            </ul>
+          </div>
+          <div style="flex: 1 1 240px; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+            <h4>🔧 Frameworks & Tools</h4>
+            <ul style="list-style: disc; margin-left: 1.2rem;">
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>MySQL</li>
+              <li>Git</li>
+              <li>Linux</li>
+              <li>AWS (EC2, S3, SQS, EMR)</li>
+            </ul>
+          </div>
+          <div style="flex: 1 1 240px; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+            <h4>📚 Core Concepts</h4>
+            <ul style="list-style: disc; margin-left: 1.2rem;">
+              <li>OOP</li>
+              <li>Data Structures</li>
+              <li>Algorithms</li>
+              <li>REST API</li>
+              <li>Cloud Computing</li>
+              <li>Map-Reduce</li>
+            </ul>
+          </div>
+          <div style="flex: 1 1 240px; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+            <h4>🧲 Testing & Debugging</h4>
+            <ul style="list-style: disc; margin-left: 1.2rem;">
+              <li>Unit Testing</li>
+              <li>Debugging Techniques</li>
+              <li>Code Reviews</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <section id="about" style="padding: 2rem;">
+        <h2>About Me</h2>
+        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+        <p>Computer Science graduate passionate about backend and full-stack development. I enjoy solving real-world problems with clean code and scalable architecture, thrive in team environments, and actively explore modern technologies.</p>
+        </div>
+    </section>
+      
+      <section id="contact" style="padding: 2rem;">
+        <h2>Contact</h2>
+        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+        <p><strong>Phone:</strong> 050-6584728</p>
+        <p><strong>Email:</strong> <a href="mailto:ben.bandarker@gmail.com">ben.bandarker@gmail.com</a></p>
+        <p>
+          <a href="https://linkedin.com/in/benbandarker" target="_blank" style="color: #1d4ed8; font-weight: 500;">LinkedIn</a> |
+          <a href="https://github.com/BenBandarker" target="_blank" style="color: #1d4ed8; font-weight: 500;">GitHub</a>
+        </p>
+        </div>
+      </section>
+      
+      <div style="text-align: center; padding: 2rem;">
+        <a href="#top" style="display: inline-block; padding: 0.75rem 1.5rem; background-color: #3b82f6; color: #fff; border-radius: 8px; text-decoration: none; font-weight: bold;">⬆ Back to Top</a>
+      </div>
