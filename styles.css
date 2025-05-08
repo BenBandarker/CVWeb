@@ -1,60 +1,195 @@
 /* styles.css */
 
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    background-color: #f0f4f8;
-    color: #1e293b;
-  }
-  
-  header {
-    background: linear-gradient(135deg, #0f172a, #3b82f6);
-    color: white;
-    padding: 2.5rem 1rem;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .download-btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #3b82f6;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s;
-  }
-  
-  .download-btn:hover {
-    background-color: #2563eb;
-  }
-  
-  nav {
-    background-color: #1e293b;
-    padding: 0.75rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li a {
-    font-weight: 600;
-    color: #f1f5f9;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: #3b82f6;
-  }
-  
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: #f0f4f8;
+  color: #1e293b;
+}
+
+header.hero-header {
+  position: relative;
+  height: 100vh;
+  background-image: url('pictures/background.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+header.hero-header h1 {
+  font-size: 6.5rem;
+  font-weight: 100;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+header.hero-header p.subtitle {
+  font-size: 4.5rem;
+  font-weight: 500;
+  color: #d6d5d5;
+}
+
+.contact-bubble {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 100%;
+}
+
+.contact-bubble h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contact-bubble p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.contact-bubble a {
+  color: #93c5fd;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #2563eb;
+}
+
+section {
+  padding: 2rem;
+}
+
+.section-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
+.flex-wrap-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.flex-col {
+  flex: 1 1 240px;
+}
+
+ul.disc-list {
+  list-style: disc;
+  margin-left: 1.2rem;
+}
+
+.back-to-top {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #3b82f6;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-to-top:hover {
+  background-color: #2563eb;
+}
+
+.project-media-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.project-media {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, z-index 0.3s;
+}
+
+.project-media:hover {
+  transform: scale(2);
+  z-index: 10;
+  object-fit: contain;
+}
+
+.project-video {
+  width: 50%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-video:hover {
+  transform: scale(1.5);
+  z-index: 10;
+}
+
+.github-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.info-section {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background-color: #fff;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+nav {
+  background-color: #1e293b;
+  padding: 0.75rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  font-weight: 600;
+  color: #f1f5f9;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #3b82f6;
+}
