@@ -119,9 +119,11 @@ ul.disc-list {
 
 .project-media-wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1rem;
   justify-content: center;
+  /* overflow-x: auto;                */
+  padding-bottom: 1rem; 
 }
 
 .project-media {
