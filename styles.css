@@ -117,6 +117,12 @@ ul.disc-list {
   background-color: #2563eb;
 }
 
+.logo-img {
+  height: 120px;
+  max-width: 120px;
+  object-fit: contain;
+}
+
 .project-media-wrapper {
   display: flex;
   flex-wrap: nowrap;
