@@ -299,8 +299,8 @@ nav ul li a:hover {
   gap: .6rem;
   padding: .625rem 1rem;
   border-radius: 9999px;                         /* צ'יפ/בלון עגול */
-  background: linear-gradient(180deg, var(--brand-100), rgba(255,255,255,.9));
-  border: 1px solid rgba(59,130,246,.35);        /* התאם אם שינית --brand */
+  background: linear-gradient(180deg, var(--brand-100), rgba(156, 155, 155, 0.9));
+  border: 1px solid rgba(20, 93, 209, 0.35);        /* התאם אם שינית --brand */
   box-shadow: 0 6px 18px rgba(59,130,246,.12);
   color: var(--brand);
   font-weight: 600;
