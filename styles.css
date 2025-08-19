@@ -293,10 +293,22 @@ nav ul li a:hover {
 #form-status.error   { color: #dc2626; } /* אדום */
 
 /* ההודעה הקבועה */
-.contact-note {
-  margin-top: .5rem;
-  font-size: .95rem;
-  color: #4876b8;          
+.contact-note{
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .625rem 1rem;
+  border-radius: 9999px;                         /* צ'יפ/בלון עגול */
+  background: linear-gradient(180deg, var(--brand-100), rgba(255,255,255,.9));
+  border: 1px solid rgba(59,130,246,.35);        /* התאם אם שינית --brand */
+  box-shadow: 0 6px 18px rgba(59,130,246,.12);
+  color: var(--brand);
+  font-weight: 600;
+  line-height: 1.4;
   text-align: center;
-  line-height: 1.6;
+  align-self: center;
 }
+
+.contact-note .note-icon{ font-size: 1.05rem; filter: drop-shadow(0 1px 0 rgba(0,0,0,.08)); }
+.contact-note .note-text strong{ font-weight: 800; }
+.contact-note .note-muted{ opacity: .78; font-weight: 500; }
