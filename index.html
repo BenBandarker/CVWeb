@@ -285,31 +285,53 @@
     <label for="message">Your Message</label>
     <textarea id="message" name="message" rows="5" maxlength="1000" placeholder="How can I help?" required></textarea>
 
+    <p id="form-status" class="hidden" aria-live="polite" role="status"></p>
+
     <button type="submit" id="send-btn">Submit Message</button>
+
+    <p class="contact-note" lang="en">I’ll do my best to get back to you within 24 hours (sometimes a bit longer) 😊</p>
   </form>
 
-  <p id="form-status" style="margin-top:0.75rem;"></p>
+
 
   <!-- הסקריפט שמבצע ולידציה ושולח ל-Netlify Function -->
   <script>
-  const formEl   = document.getElementById("contact-form");
-  const statusEl = document.getElementById("form-status");
-  const sendBtn  = document.getElementById("send-btn");
+  const formEl    = document.getElementById("contact-form");
+  const statusEl  = document.getElementById("form-status");
+  const sendBtn   = document.getElementById("send-btn");
   const emailInput = formEl.email;
-
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // מנקים הודעת שגיאה ברגע שהאימייל תקין תוך כדי הקלדה
+  // פונקציה קטנה לניהול הודעות
+  let statusTimer;
+  function showStatus(msg, type) {
+    clearTimeout(statusTimer);
+    statusEl.textContent = msg;
+    statusEl.classList.remove("hidden", "success", "error");
+    statusEl.classList.add("show", type); // success / error
+
+    // העלם אוטומטית אחרי 4.5 שניות (אפשר לשנות)
+    statusTimer = setTimeout(() => {
+      statusEl.textContent = "";
+      statusEl.classList.remove("show", "success", "error");
+      statusEl.classList.add("hidden");
+    }, 4500);
+  }
+
+  // מנקה הודעת שגיאה כשמתקנים את המייל תוך כדי הקלדה
   emailInput.addEventListener("input", () => {
     const v = emailInput.value.trim().toLowerCase();
     if (emailRegex.test(v) || v === "") {
       statusEl.textContent = "";
+      statusEl.classList.add("hidden");
     }
   });
 
   formEl.addEventListener("submit", async (e) => {
     e.preventDefault();
-    statusEl.textContent = ""; // מנקים הודעות קודמות
+    clearTimeout(statusTimer);
+    statusEl.textContent = "";
+    statusEl.classList.add("hidden");
 
     const name    = formEl.name.value.trim();
     const email   = formEl.email.value.trim().toLowerCase();
@@ -317,14 +339,10 @@
     const bot     = (document.getElementById("bot_field")?.value || "").trim();
 
     if (!name || !email || !message) {
-      statusEl.textContent = "❌ Please fill all fields.";
-      statusEl.style.color = "red";
-      return;
+      return showStatus("❌ Please fill all fields.", "error");
     }
     if (!emailRegex.test(email)) {
-      statusEl.textContent = "❌ Please enter a valid email address.";
-      statusEl.style.color = "red";
-      return;
+      return showStatus("❌ Please enter a valid email address.", "error");
     }
 
     sendBtn.disabled = true;
@@ -339,16 +357,13 @@
       const data = await res.json();
 
       if (res.ok && data.ok) {
-        statusEl.textContent = "✅ Message sent successfully!";
-        statusEl.style.color = "green";
+        showStatus("✅ Message sent successfully! Thanks, I’ll get back to you soon.", "success");
         formEl.reset();
       } else {
-        statusEl.textContent = "❌ " + (data.error || "Failed to send. Try again later.");
-        statusEl.style.color = "red";
+        showStatus("❌ " + (data.error || "Failed to send email."), "error");
       }
     } catch (err) {
-      statusEl.textContent = "❌ Network error. Please try again.";
-      statusEl.style.color = "red";
+      showStatus("❌ Network error. Please try again.", "error");
       console.error(err);
     } finally {
       sendBtn.disabled = false;
