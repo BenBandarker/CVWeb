@@ -34,6 +34,15 @@ export const handler = async (event) => {
       return { statusCode: 400, headers, body: JSON.stringify({ error: "Invalid email address." }) };
     }
 
+    const sentAt = new Date().toLocaleString("he-IL", {
+    timeZone: "Asia/Jerusalem",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit"
+    });
+
     // ENV מה-Netlify Dashboard
     const serviceId  = process.env.EMAILJS_SERVICE_ID;
     const templateId = process.env.EMAILJS_TEMPLATE_ID;
@@ -49,9 +58,10 @@ export const handler = async (event) => {
       template_id: templateId,
       user_id: publicKey,
       template_params: {
-        from_name: nameClean,
-        from_email: emailClean,
+        name: nameClean,
+        time: sentAt,
         message: messageClean,
+        email: emailClean,
       },
     //   accessToken: accessToken || undefined,
     };
