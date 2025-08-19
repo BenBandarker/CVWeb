@@ -38,7 +38,7 @@ export const handler = async (event) => {
     const serviceId  = process.env.EMAILJS_SERVICE_ID;
     const templateId = process.env.EMAILJS_TEMPLATE_ID;
     const publicKey  = process.env.EMAILJS_PUBLIC_KEY;      // user_id
-    const accessToken = process.env.EMAILJS_ACCESS_TOKEN;   // אופצ'
+    // const accessToken = process.env.EMAILJS_ACCESS_TOKEN;   // אופצ'
 
     if (!serviceId || !templateId || !publicKey) {
       return { statusCode: 500, headers, body: JSON.stringify({ error: "EmailJS env vars are missing." }) };
@@ -53,7 +53,7 @@ export const handler = async (event) => {
         from_email: emailClean,
         message: messageClean,
       },
-      accessToken: accessToken || undefined,
+    //   accessToken: accessToken || undefined,
     };
 
     const resp = await fetch("https://api.emailjs.com/api/v1.0/email/send", {

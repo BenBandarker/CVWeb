@@ -292,61 +292,70 @@
 
   <!-- הסקריפט שמבצע ולידציה ושולח ל-Netlify Function -->
   <script>
-    const formEl = document.getElementById("contact-form");
-    const statusEl = document.getElementById("form-status");
-    const sendBtn  = document.getElementById("send-btn");
+  const formEl   = document.getElementById("contact-form");
+  const statusEl = document.getElementById("form-status");
+  const sendBtn  = document.getElementById("send-btn");
+  const emailInput = formEl.email;
 
-    formEl.addEventListener("submit", async (e) => {
-      e.preventDefault();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // מנקים הודעת שגיאה ברגע שהאימייל תקין תוך כדי הקלדה
+  emailInput.addEventListener("input", () => {
+    const v = emailInput.value.trim().toLowerCase();
+    if (emailRegex.test(v) || v === "") {
       statusEl.textContent = "";
+    }
+  });
 
-      const name = formEl.name.value.trim();
-      const email = formEl.email.value.trim().toLowerCase();
-      const message = formEl.message.value.trim();
-      const bot_field = (document.getElementById("bot_field")?.value || "").trim();
+  formEl.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    statusEl.textContent = ""; // מנקים הודעות קודמות
 
-      if (!name || !email || !message) {
-        statusEl.textContent = "❌ Please fill all fields.";
+    const name    = formEl.name.value.trim();
+    const email   = formEl.email.value.trim().toLowerCase();
+    const message = formEl.message.value.trim();
+    const bot     = (document.getElementById("bot_field")?.value || "").trim();
+
+    if (!name || !email || !message) {
+      statusEl.textContent = "❌ Please fill all fields.";
+      statusEl.style.color = "red";
+      return;
+    }
+    if (!emailRegex.test(email)) {
+      statusEl.textContent = "❌ Please enter a valid email address.";
+      statusEl.style.color = "red";
+      return;
+    }
+
+    sendBtn.disabled = true;
+    sendBtn.textContent = "Sending...";
+
+    try {
+      const res = await fetch("/.netlify/functions/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message, bot_field: bot }),
+      });
+      const data = await res.json();
+
+      if (res.ok && data.ok) {
+        statusEl.textContent = "✅ Message sent successfully!";
+        statusEl.style.color = "green";
+        formEl.reset();
+      } else {
+        statusEl.textContent = "❌ " + (data.error || "Failed to send. Try again later.");
         statusEl.style.color = "red";
-        return;
       }
-      const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
-      if (!emailRegex.test(email)) {
-        statusEl.textContent = "❌ Please enter a valid email address.";
-        statusEl.style.color = "red";
-        return;
-      }
-
-      sendBtn.disabled = true;
-      sendBtn.textContent = "Sending...";
-
-      try {
-        const res = await fetch("/.netlify/functions/send-email", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, message, bot_field }),
-        });
-
-        const data = await res.json();
-
-        if (res.ok && data.ok) {
-          statusEl.textContent = "✅ Message sent successfully!";
-          statusEl.style.color = "green";
-          formEl.reset();
-        } else {
-          statusEl.textContent = "❌ " + (data.error || "Failed to send. Try again later.");
-          statusEl.style.color = "red";
-        }
-      } catch (err) {
-        console.error(err);
-        statusEl.textContent = "❌ Network error. Please try again.";
-        statusEl.style.color = "red";
-      } finally {
-        sendBtn.disabled = false;
-        sendBtn.textContent = "Submit Message";
-      }
-    });
-  </script>
+    } catch (err) {
+      statusEl.textContent = "❌ Network error. Please try again.";
+      statusEl.style.color = "red";
+      console.error(err);
+    } finally {
+      sendBtn.disabled = false;
+      sendBtn.textContent = "Submit Message";
+    }
+  });
+</script>
   </div>
 </section>
       
