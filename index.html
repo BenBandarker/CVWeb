@@ -260,32 +260,37 @@
     </section>
       
       <section id="contact" style="padding: 2rem;">
-        <h2>Contact</h2>
-        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
-        <p><strong>Phone:</strong> 050-6584728</p>
-        <p><strong>Email:</strong> <a href="mailto:ben.bandarker@gmail.com">ben.bandarker@gmail.com</a></p>
-        <p>
-          <a href="https://linkedin.com/in/benbandarker" target="_blank" style="color: #1d4ed8; font-weight: 500;">LinkedIn</a> |
-          <a href="https://github.com/BenBandarker" target="_blank" style="color: #1d4ed8; font-weight: 500;">GitHub</a>
-        </p>
-        </div>
+  <h2>Contact</h2>
 
-        <!-- <h2>Get in touch now!</h2>
-          <form id="contact-form" class="contact-form">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Israel Israeli" required>
+  <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+    <p><strong>Phone:</strong> 050-6584728</p>
+    <p><strong>Email:</strong> <a href="mailto:ben.bandarker@gmail.com">ben.bandarker@gmail.com</a></p>
+    <p>
+      <a href="https://linkedin.com/in/benbandarker" target="_blank" style="color: #1d4ed8; font-weight: 500;">LinkedIn</a> |
+      <a href="https://github.com/BenBandarker" target="_blank" style="color: #1d4ed8; font-weight: 500;">GitHub</a>
+    </p>
 
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+  <!-- טופס יצירת קשר -->
+  <h3 style="margin-top:1.5rem;">Get in touch now!</h3>
+  <form id="contact-form" class="contact-form" novalidate>
+    <!-- Honeypot נגד בוטים -->
+    <input type="text" name="bot_field" id="bot_field" style="display:none" tabindex="-1" autocomplete="off">
 
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5" maxlength="1000" placeholder="How can I help?" required></textarea>
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Israel Israeli" required>
 
-            <button type="submit">Submit Message</button>
-          </form>
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
 
-          <p id="form-status" style="margin-top:0.75rem;"></p>
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="5" maxlength="1000" placeholder="How can I help?" required></textarea>
 
+    <button type="submit" id="send-btn">Submit Message</button>
+  </form>
+
+  <p id="form-status" style="margin-top:0.75rem;"></p>
+
+  <!-- הסקריפט שמבצע ולידציה ושולח ל-Netlify Function -->
   <script>
     const formEl = document.getElementById("contact-form");
     const statusEl = document.getElementById("form-status");
@@ -298,14 +303,14 @@
       const name = formEl.name.value.trim();
       const email = formEl.email.value.trim().toLowerCase();
       const message = formEl.message.value.trim();
-      const bot_field = document.getElementById("bot_field").value;
+      const bot_field = (document.getElementById("bot_field")?.value || "").trim();
 
       if (!name || !email || !message) {
         statusEl.textContent = "❌ Please fill all fields.";
         statusEl.style.color = "red";
         return;
       }
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
       if (!emailRegex.test(email)) {
         statusEl.textContent = "❌ Please enter a valid email address.";
         statusEl.style.color = "red";
@@ -341,9 +346,9 @@
         sendBtn.textContent = "Submit Message";
       }
     });
-  </script> -->
-
-      </section>
+  </script>
+  </div>
+</section>
       
       <div style="text-align: center; padding: 2rem;">
         <a href="#top" class="download-btn">⬆ Back to Top</a>
