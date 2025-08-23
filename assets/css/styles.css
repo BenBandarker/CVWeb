@@ -133,14 +133,16 @@ ul.disc-list {
 }
 
 .project-media {
-  height: 300px;
-  object-fit: cover;
+  max-width: 100%;     
+  width: 250px;        
+  height: 200px;       
+  object-fit: cover;   
   border-radius: 8px;
   transition: transform 0.3s ease, z-index 0.3s;
 }
 
 .project-media:hover {
-  transform: scale(2);
+  transform: scale(2.5);
   z-index: 10;
   object-fit: contain;
 }

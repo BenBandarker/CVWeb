@@ -65,6 +65,8 @@
                 <span class="skill-bubble">Git</span>
                 <span class="skill-bubble">Linux</span>
                 <span class="skill-bubble">AWS</span>
+                <span class="skill-bubble">EmailJS</span>
+                <span class="skill-bubble">Netlify</span>
               </div>
             </ul>
           </div>
@@ -78,6 +80,10 @@
                 <span class="skill-bubble">REST API</span>
                 <span class="skill-bubble">Cloud Computing</span>
                 <span class="skill-bubble">Map-Reduce</span>
+                <span class="skill-bubble">Responsive Design</span>
+                <span class="skill-bubble">Form Validation</span>
+                <span class="skill-bubble">Web Accessibility</span>
+                
               </div>
             </ul>
           </div>
@@ -98,6 +104,8 @@
       <section id="projects" style="padding: 2rem;">
         <h2>Projects</h2>
         <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+
+          <!-- Football Stats Backend -->
           <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
             <h3>Football Stats Backend</h3>
             <div class="project-media-wrapper">
@@ -105,12 +113,13 @@
               <img src="assets/img/Tournament_Controller_Service.png" alt="Controller & Service" class="project-media">
               <img src="assets/img/Postman.png" alt="Postman Example" class="project-media">
             </div>
-            <p><strong>Technologies:</strong> Node.js, Express.js, MySQL</p>
-            <p>Developed a scalable backend system to manage and query real-time football statistics. </p>
-            <p>I designed and implemented RESTful APIs with robust validation and filtering logic using a modular Node.js and Express.js architecture connected to a MySQL database.</p>
-            <p></p>This resulted in a clean and efficient system that supports fast data exploration and reliable access to team, match, and player insights.</p>
+            <p>Developed a scalable backend system to manage and query real-time football statistics.</p>
+            <p><strong>Stack:</strong> Node.js, Express.js, MySQL</p>
+            <p><strong>Highlights:</strong> Designed RESTful APIs with robust validation & filtering; modular Node.js + Express.js architecture; connected to a MySQL relational schema; supports fast and reliable access to teams, matches, and player insights.</p>
             <p><a href="https://github.com/BenBandarker/footballStatsPro" target="_blank"><img src="assets/img/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
-        </div>
+          </div>
+
+          <!-- Sarcasm Analysis -->
           <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
             <h3>Sarcasm Analysis</h3>
             <div class="project-media-wrapper">
@@ -118,12 +127,13 @@
               <img src="assets/img/SarcasmLocalAppMain.png" alt="Sarcasm Local App" class="project-media">
               <img src="assets/img/SarcasmWorkerMain.png" alt="Sarcasm Worker" class="project-media">
             </div>
-            <p><strong>Technologies:</strong> Java, AWS (S3, EC2, SQS)</p>
-            <p>Built a distributed Java application that analyzes sarcasm in Amazon reviews using NLP techniques and AWS cloud services. </p>
-            <p>The system leveraged S3 for data storage, EC2 for computation, and SQS for asynchronous messaging. </p>
-            <p>I designed a producer-consumer architecture that enabled scalable parallel processing, resulting in efficient and reliable sarcasm classification across large datasets.</p>
+            <p>Built a distributed Java application that analyzes sarcasm in Amazon reviews using NLP and AWS cloud services.</p>
+            <p><strong>Stack:</strong> Java, AWS (S3, EC2, SQS)</p>
+            <p><strong>Highlights:</strong> Designed producer-consumer architecture with scalable parallel processing; leveraged S3 for storage, EC2 for computation, and SQS for messaging; enabled efficient sarcasm classification across large datasets.</p>
             <p><a href="https://github.com/BenBandarker/Sarcasm-Analysis" target="_blank"><img src="assets/img/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
-        </div>
+          </div>
+
+          <!-- Collocation Extraction -->
           <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
             <h3>Collocation Extraction</h3>
             <div class="project-media-wrapper">
@@ -132,26 +142,44 @@
               <img src="assets/img/step1code.png" alt="Collocation 3" class="project-media">
               <img src="assets/img/step2code.png" alt="Collocation 4" class="project-media">
             </div>
-            <p><strong>Technologies:</strong> Java, Hadoop, AWS EMR</p>
-            <p>Processed massive linguistic datasets using MapReduce to identify word pairings based on statistical significance. </p>
-            <p>I built a Hadoop pipeline in Java and deployed it on AWS EMR to analyze Google 2-gram data, computing PMI scores to extract meaningful collocations. </p>
-            <p>The result was a high-performance, cost-effective solution for large-scale linguistic analysis.</p>
+            <p>Processed massive linguistic datasets using MapReduce to identify word pairings based on statistical significance.</p>
+            <p><strong>Stack:</strong> Java, Hadoop, AWS EMR</p>
+            <p><strong>Highlights:</strong> Built a Hadoop pipeline in Java; deployed on AWS EMR; analyzed Google 2-gram data; computed PMI scores to extract meaningful collocations; achieved high-performance, cost-effective large-scale linguistic analysis.</p>
             <p><a href="https://github.com/BenBandarker/Collocation-Extraction" target="_blank"><img src="assets/img/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
-        </div>
+          </div>
+
+          <!-- Personal Website Portfolio -->
+          <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+            <h3>Personal Website – Portfolio</h3>
+            <div class="project-media-wrapper">
+              <img src="assets/img/hero-section.png" alt="Homepage hero" class="project-media">
+              <img src="assets/img/contact-form.png" alt="Contact form with EmailJS" class="project-media">
+              <img src="assets/img/skills-section.png" alt="Skills section" class="project-media">
+            </div>
+            <p>A personal portfolio website showcasing my projects, skills, and background. Built with clean HTML, CSS, and vanilla JS, featuring smooth section animations and a secure contact workflow.</p>
+            <p><strong>Stack:</strong> HTML, CSS, JavaScript, EmailJS, Netlify</p>
+            <p><strong>Highlights:</strong> ScrollReveal animations; EmailJS contact form with client-side validation & honeypot; API keys stored in Netlify environment variables; clear assets structure (CSS/JS/Images); fully responsive layout.</p>
+            <p>
+              <a href="https://github.com/BenBandarker/CVWeb" target="_blank"><img src="assets/img/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a>
+              <a href="https://benbandarker.com/" target="_blank">Live Site</a>
+            </p>
+          </div>
+
+          <!-- SET Game -->
           <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
             <h3>SET Game (Multithreaded)</h3>
             <div style="text-align: center;">
               <video src="assets/img/setVideo.mp4" controls class="project-video"></video>
             </div>
-            <p><strong>Technologies:</strong> Java</p>
-            <p>Simulated the SET card game using Java with a fully concurrent architecture. </p>
-            <p>I applied object-oriented design and multithreading principles to manage real-time gameplay logic, synchronize player threads, and handle edge cases.</p> 
-            <p>This project demonstrates my ability to design interactive systems with complex concurrency and correctness requirements.</p>
+            <p>Simulated the SET card game using Java with a fully concurrent architecture.</p>
+            <p><strong>Stack:</strong> Java</p>
+            <p><strong>Highlights:</strong> Applied OOP and multithreading to manage real-time gameplay logic; synchronized multiple player threads; ensured correctness under concurrent conditions; demonstrated ability to design interactive systems with complex concurrency requirements.</p>
             <p><a href="https://github.com/BenBandarker/SET" target="_blank"><img src="assets/img/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
-        </div>
+          </div>
+
         </div>
       </section>
-      
+          
   
       <section id="education" style="padding: 2rem;">
   <h2>Education</h2>
