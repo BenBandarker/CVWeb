@@ -38,11 +38,14 @@
     <script src="https://unpkg.com/scrollreveal" defer></script>
     <script src="/assets/js/main.js" defer></script>
 
-      
-  <section id="skills" style="padding: 2rem;">
+  <!-- CHANGED: הסרתי style="padding: 2rem;" כי יש כבר rule כללי ל-section בקובץ ה-CSS -->
+  <section id="skills">
         <h2>Skills</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
-          <div style="flex: 1 1 240px; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+
+        <!-- CHANGED: החלפתי inline styles ב-class חדש skills-grid -->
+        <div class="skills-grid">
+          <!-- CHANGED: החלפתי inline styles במחלקות section-card + flex-col (כבר קיימות ב-CSS) -->
+          <div class="section-card flex-col">
             <h4>🧠 Languages</h4>
             <ul style="list-style: disc; margin-left: 1.2rem;">
               <div>
@@ -54,7 +57,8 @@
               </div>
             </ul>
           </div>
-          <div style="flex: 1 1 240px; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+
+          <div class="section-card flex-col">
             <h4>🔧 Frameworks & Tools</h4>
             <ul style="list-style: disc; margin-left: 1.2rem;">
               <div>
@@ -70,7 +74,8 @@
               </div>
             </ul>
           </div>
-          <div style="flex: 1 1 240px; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+
+          <div class="section-card flex-col">
             <h4>📚 Core Concepts</h4>
             <ul style="list-style: disc; margin-left: 1.2rem;">
               <div>
@@ -83,11 +88,11 @@
                 <span class="skill-bubble">Responsive Design</span>
                 <span class="skill-bubble">Form Validation</span>
                 <span class="skill-bubble">Web Accessibility</span>
-                
               </div>
             </ul>
           </div>
-          <div style="flex: 1 1 240px; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+
+          <div class="section-card flex-col">
             <h4>🧲 Testing & Debugging</h4>
             <ul style="list-style: disc; margin-left: 1.2rem;">
               <div>
@@ -99,14 +104,14 @@
           </div>
         </div>
       </section>
-      
-      
-      <section id="projects" style="padding: 2rem;">
-        <h2>Projects</h2>
-        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
 
-          <!-- Football Stats Backend -->
-          <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+      <!-- CHANGED: הסרתי style="padding: 2rem;" + הוספתי class projects-grid במקום inline grid -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+
+          <!-- כרטיסים כפי שהיו (ללא שינוי עיצוב בדסקטופ) -->
+          <div class="section-card">
             <h3>Football Stats Backend</h3>
             <div class="project-media-wrapper">
               <img src="assets/img/football_er_diagram.png" alt="Football stats ER" class="project-media">
@@ -119,8 +124,7 @@
             <p><a href="https://github.com/BenBandarker/footballStatsPro" target="_blank"><img src="assets/img/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
           </div>
 
-          <!-- Sarcasm Analysis -->
-          <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+          <div class="section-card">
             <h3>Sarcasm Analysis</h3>
             <div class="project-media-wrapper">
               <img src="assets/img/SarcasmManagerMain.png" alt="Sarcasm Manager" class="project-media">
@@ -133,8 +137,7 @@
             <p><a href="https://github.com/BenBandarker/Sarcasm-Analysis" target="_blank"><img src="assets/img/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
           </div>
 
-          <!-- Collocation Extraction -->
-          <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+          <div class="section-card">
             <h3>Collocation Extraction</h3>
             <div class="project-media-wrapper">
               <img src="assets/img/collocationCode1.png" alt="Collocation 1" class="project-media">
@@ -148,8 +151,7 @@
             <p><a href="https://github.com/BenBandarker/Collocation-Extraction" target="_blank"><img src="assets/img/github.jpeg" alt="GitHub" class="github-icon">View on GitHub</a></p>
           </div>
 
-          <!-- Personal Website Portfolio -->
-          <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+          <div class="section-card">
             <h3>Personal Website – Portfolio</h3>
             <div class="project-media-wrapper">
               <img src="assets/img/hero-section.png" alt="Homepage hero" class="project-media">
@@ -165,8 +167,7 @@
             </p>
           </div>
 
-          <!-- SET Game -->
-          <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+          <div class="section-card">
             <h3>SET Game (Multithreaded)</h3>
             <div style="text-align: center;">
               <video src="assets/img/setVideo.mp4" controls class="project-video"></video>
@@ -179,8 +180,8 @@
 
         </div>
       </section>
-          
-  
+
+      <!-- שאר הסקשנים נשארו ללא שינוי ויזואלי בדסקטופ -->
       <section id="education" style="padding: 2rem;">
   <h2>Education</h2>
 
@@ -208,7 +209,6 @@
     <img src="assets/img/moshalLogo.png" alt="Moshal Program Logo" class="logo-img">
   </div>
 </section>
-      
 
 <section id="certificates" style="padding: 2rem;">
   <h2>Certificates</h2>
@@ -221,12 +221,10 @@
     </a>
   </div>
 </section>
-      
+
       <section id="about" style="padding: 2rem;">
         <h2>About Me</h2>
   <div class="about-container">
-      
-      <!-- טקסט -->
       <div class="about-text">
         <p>
           I'm <strong>Ben Bandarker</strong>, 27 years old, and a Computer Science graduate from <strong>Ben-Gurion University</strong>.  
@@ -245,15 +243,10 @@
           <br>Outside of work, I enjoy <strong>working out at the gym</strong>, playing <strong>chess</strong>, and watching <strong>football</strong>.  
         </p>
       </div>
-
-      <!-- תמונה אישית -->
-      <!-- <div class="about-img-wrapper"> -->
-        <img src="assets/img/Me.jpeg" alt="Ben Bandarker" class="profile-img">
-      <!-- </div> -->
-
+      <img src="assets/img/Me.jpeg" alt="Ben Bandarker" class="profile-img">
   </div>
     </section>
-      
+
       <section id="contact" style="padding: 2rem;">
   <h2>Contact</h2>
 
@@ -265,10 +258,8 @@
       <a href="https://github.com/BenBandarker" target="_blank" style="color: #1d4ed8; font-weight: 500;">GitHub</a>
     </p>
 
-  <!-- טופס יצירת קשר -->
   <h3 style="margin-top:1.5rem;">Get in touch now!</h3>
   <form id="contact-form" class="contact-form" novalidate>
-    <!-- Honeypot נגד בוטים -->
     <input type="text" name="bot_field" id="bot_field" style="display:none" tabindex="-1" autocomplete="off">
 
     <label for="name">Your Name</label>
@@ -293,88 +284,10 @@
     </p>  
   </form>
 
-
-
-  <!-- הסקריפט שמבצע ולידציה ושולח ל-Netlify Function
-  <script>
-  const formEl    = document.getElementById("contact-form");
-  const statusEl  = document.getElementById("form-status");
-  const sendBtn   = document.getElementById("send-btn");
-  const emailInput = formEl.email;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  // פונקציה קטנה לניהול הודעות
-  let statusTimer;
-  function showStatus(msg, type) {
-    clearTimeout(statusTimer);
-    statusEl.textContent = msg;
-    statusEl.classList.remove("hidden", "success", "error");
-    statusEl.classList.add("show", type); // success / error
-
-    // העלם אוטומטית אחרי 4.5 שניות (אפשר לשנות)
-    statusTimer = setTimeout(() => {
-      statusEl.textContent = "";
-      statusEl.classList.remove("show", "success", "error");
-      statusEl.classList.add("hidden");
-    }, 4500);
-  }
-
-  // מנקה הודעת שגיאה כשמתקנים את המייל תוך כדי הקלדה
-  emailInput.addEventListener("input", () => {
-    const v = emailInput.value.trim().toLowerCase();
-    if (emailRegex.test(v) || v === "") {
-      statusEl.textContent = "";
-      statusEl.classList.add("hidden");
-    }
-  });
-
-  formEl.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    clearTimeout(statusTimer);
-    statusEl.textContent = "";
-    statusEl.classList.add("hidden");
-
-    const name    = formEl.name.value.trim();
-    const email   = formEl.email.value.trim().toLowerCase();
-    const message = formEl.message.value.trim();
-    const bot     = (document.getElementById("bot_field")?.value || "").trim();
-
-    if (!name || !email || !message) {
-      return showStatus("❌ Please fill all fields.", "error");
-    }
-    if (!emailRegex.test(email)) {
-      return showStatus("❌ Please enter a valid email address.", "error");
-    }
-
-    sendBtn.disabled = true;
-    sendBtn.textContent = "Sending...";
-
-    try {
-      const res = await fetch("/.netlify/functions/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message, bot_field: bot }),
-      });
-      const data = await res.json();
-
-      if (res.ok && data.ok) {
-        showStatus("✅ Message sent successfully! Thanks, I’ll get back to you soon.", "success");
-        formEl.reset();
-      } else {
-        showStatus("❌ " + (data.error || "Failed to send email."), "error");
-      }
-    } catch (err) {
-      showStatus("❌ Network error. Please try again.", "error");
-      console.error(err);
-    } finally {
-      sendBtn.disabled = false;
-      sendBtn.textContent = "Submit Message";
-    }
-  });
-</script> -->
+  <!-- הסקריפט המקורי הושאר כמוסגר/מוחלף ב-main.js -->
   </div>
 </section>
-      
+
       <div style="text-align: center; padding: 2rem;">
         <a href="#top" class="download-btn">⬆ Back to Top</a>
       </div>
