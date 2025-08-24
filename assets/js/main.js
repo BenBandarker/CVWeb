@@ -1,13 +1,17 @@
 
 // ===== ScrollReveal for sections =====
 document.addEventListener("DOMContentLoaded", () => {
-  ScrollReveal().reveal("section", {
-    distance: "50px",
-    duration: 800,
-    easing: "ease-out",
-    origin: "bottom",
-    interval: 150
-  });
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+  if (!isMobile && window.ScrollReveal) {
+    ScrollReveal().reveal("section", {
+      distance: "50px",
+      duration: 800,
+      easing: "ease-out",
+      origin: "bottom",
+      interval: 150
+    });
+  }
 });
 
 // ===== Contact form handler (Netlify function) =====

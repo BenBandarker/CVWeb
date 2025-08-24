@@ -1,3 +1,4 @@
+/* ===== Base ===== */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -5,6 +6,7 @@ body {
   color: #1e293b;
 }
 
+/* ===== Hero ===== */
 header.hero-header {
   position: relative;
   min-height: 100vh;
@@ -35,7 +37,7 @@ header.hero-header p.subtitle {
 }
 
 .contact-bubble {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0,0,0,.9);
   padding: 2rem;
   border-radius: 12px;
   max-width: 100%;
@@ -44,7 +46,7 @@ header.hero-header p.subtitle {
 .contact-bubble h2 {
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 .contact-bubble p {
@@ -61,33 +63,32 @@ header.hero-header p.subtitle {
 .download-btn {
   display: inline-block;
   margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #3b82f6;
+  padding: .75rem 1.5rem;
+  background: #3b82f6;
   color: #fff;
   border: none;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s;
+  transition: background-color .3s;
 }
 
 .download-btn:hover {
-  background-color: #2563eb;
+  background: #2563eb;
 }
 
 section {
   padding: 2rem;
 }
 
-/* ===== NEW: גריד לסקשן Projects בלי inline styles ===== */
-.projects-grid { /* CHANGED: חדש */
+/* ===== Layout helpers ===== */
+.projects-grid {
   display: grid;
-  grid-template-columns: 1fr; /* לשמור על מראה קיים בדסקטופ */
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
-/* ===== NEW: גריד ל-Skills במקום inline styles ===== */
-.skills-grid { /* CHANGED: חדש */
+.skills-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
@@ -97,7 +98,7 @@ section {
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 1.5rem;
-  background-color: #fff;
+  background: #fff;
 }
 
 .flex-wrap-row {
@@ -117,8 +118,8 @@ ul.disc-list {
 
 .back-to-top {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #3b82f6;
+  padding: .75rem 1.5rem;
+  background: #3b82f6;
   color: #fff;
   border-radius: 8px;
   text-decoration: none;
@@ -126,63 +127,52 @@ ul.disc-list {
 }
 
 .back-to-top:hover {
-  background-color: #2563eb;
+  background: #2563eb;
 }
 
-/* .logo-img {
-  height: 80px;
-  max-width: 100px;
+/* ===== Logos ===== */
+#education .logo-img,
+#certificates .logo-img {
+  width: 96px !important;
+  height: 96px !important;
+  max-width: 96px !important;
+  max-height: 96px !important;
   object-fit: contain;
-} */
-
-#education .logo-img,
-#certificates .logo-img {
-  /* קובעים מסגרת קשיחה ללוגו */
-  width: 150px !important;     /* היה 120 — עכשיו קטן יותר */
-  height: 150px !important;    /* ריבוע קטן ואחיד */
-  max-width: 150px !important;
-  max-height: 150px !important;
-
-  object-fit: contain;        /* שומר יחס מקורי בלי חיתוך */
   display: block;
-  flex: 0 0 96px;             /* מונע מהלוגו “למתוח” את ה־flex row */
-}
-
-/* ריווח ויישור נעים של התמונה בתוך הכרטיס */
-#education .logo-img,
-#certificates .logo-img {
+  flex: 0 0 96px;
   margin-left: 1rem;
 }
 
-/* CHANGED: לאפשר שבירת שורות של התמונות כדי שלא יפרצו את הרוחב */
+/* ===== Projects ===== */
 .project-media-wrapper {
   display: flex;
-  flex-wrap: wrap;         /* CHANGED: היה nowrap */
+  flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
   padding-bottom: 1rem;
 }
 
-/* CHANGED: מידות תמונה קבועות + הגנה על רוחב הכרטיס */
 .project-media {
   max-width: 100%;
-  width: 250px;
-  height: 200px;
+  width: 350px;
+  height: 300px;
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease, z-index 0.3s;
 }
 
-.project-media:hover {
-  transform: scale(2.5);
-  z-index: 10;
-  object-fit: contain;
+@media (hover:hover) {
+  .project-media:hover {
+    transform: scale(2.5);
+    z-index: 10;
+    object-fit: contain;
+  }
 }
 
 .project-video {
   width: 50%;
   border-radius: 8px;
-  transition: transform 0.3s ease;
+  transition: transform .3s ease;
 }
 
 .project-video:hover {
@@ -197,20 +187,19 @@ ul.disc-list {
   vertical-align: middle;
 }
 
+/* ===== Cards, nav, forms, about ===== */
 .info-section {
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 1.5rem;
-  background-color: #fff;
-  margin-bottom: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  background: #fff;
+  margin: 0 1rem 2rem;
 }
 
 nav {
-  background-color: #1e293b;
-  padding: 0.75rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #1e293b;
+  padding: .75rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 
 nav ul {
@@ -226,7 +215,7 @@ nav ul li a {
   font-weight: 600;
   color: #f1f5f9;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color .3s;
 }
 
 nav ul li a:hover {
@@ -245,34 +234,34 @@ nav ul li a:hover {
 
 .contact-form input,
 .contact-form textarea {
-  padding: 0.75rem;
+  padding: .75rem;
   border-radius: 8px;
   border: 1px solid #cbd5e1;
   font-size: 1rem;
 }
 
 .contact-form button {
-  padding: 0.75rem;
-  background-color: #3b82f6;
+  padding: .75rem;
+  background: #3b82f6;
   color: #fff;
   font-weight: bold;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color .3s;
 }
 
 .contact-form button:hover {
-  background-color: #2563eb;
+  background: #2563eb;
 }
 
 .skill-bubble {
   display: inline-block;
-  background-color: #3b82f6;
-  color: white;
-  padding: 0.5rem 1rem;
+  background: #3b82f6;
+  color: #fff;
+  padding: .5rem 1rem;
   border-radius: 20px;
-  margin: 0.3rem;
+  margin: .3rem;
   font-weight: 500;
 }
 
@@ -284,7 +273,7 @@ nav ul li a:hover {
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 2rem;
-  background-color: #fff;
+  background: #fff;
 }
 
 .about-text {
@@ -309,28 +298,28 @@ nav ul li a:hover {
   height: 260px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
 }
 
 #form-status {
   font-weight: 600;
-  margin-top: 0.75rem;
+  margin-top: .75rem;
   transition: opacity .3s ease;
 }
+
 #form-status.hidden { opacity: 0; }
 #form-status.show   { opacity: 1; }
 #form-status.success { color: #16a34a; }
 #form-status.error   { color: #dc2626; }
 
-/* ההודעה הקבועה */
-.contact-note{
+.contact-note {
   display: inline-flex;
   align-items: center;
   gap: .6rem;
   padding: .625rem 1rem;
   border-radius: 9999px;
-  background: linear-gradient(180deg, var(--brand-100), rgba(156, 155, 155, 0.9));
-  border: 1px solid rgba(20, 93, 209, 0.35);
+  background: linear-gradient(180deg, var(--brand-100), rgba(156,155,155,.9));
+  border: 1px solid rgba(20,93,209,.35);
   box-shadow: 0 6px 18px rgba(59,130,246,.12);
   color: var(--brand);
   font-weight: 600;
@@ -339,77 +328,136 @@ nav ul li a:hover {
   align-self: center;
 }
 
-.contact-note .note-icon{ font-size: 1.05rem; filter: drop-shadow(0 1px 0 rgba(0,0,0,.08)); }
-.contact-note .note-text strong{ font-weight: 800; }
-.contact-note .note-muted{ opacity: .78; font-weight: 500; }
+.contact-note .note-icon { font-size: 1.05rem; }
+.contact-note .note-text strong { font-weight: 800; }
+.contact-note .note-muted { opacity: .78; font-weight: 500; }
 
-/* =========================
-   Responsive enhancements
-   ========================= */
-
-/* CHANGED: הגנות בסיס לכל המדיה */
-.project-media,
-.project-video,
+/* ===== Utilities ===== */
 .profile-img,
-.logo-img {
+.logo-img,
+.project-video {
   max-width: 100%;
   height: auto;
 }
 
-/* טיפוגרפיה מסתגלת בכותרות ההירו (לא משנה בדסקטופ) */
-.hero-header h1 {
-  font-size: clamp(2rem, 5vw, 6.5rem);
-}
-.hero-header .subtitle {
-  font-size: clamp(1.1rem, 3.2vw, 4.5rem);
+#contact {
+  position: relative;
+  z-index: 1;
 }
 
-/* ====== ≤ 767px (מובייל) ====== */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* ===== Mobile ≤ 767px ===== */
 @media (max-width: 767px) {
   nav ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: .75rem;
     padding: 0 1rem;
   }
-  nav li a { font-size: 0.95rem; }
 
-  /* Skills: טור אחד במובייל */
+  nav li a {
+    font-size: .95rem;
+  }
+
   .skills-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  .section-card { padding: 1rem; }
 
-  /* Projects: נשאר עמודה אחת — רק מרווחים קטנים יותר */
-  #projects { padding: 1rem; }
-  .projects-grid { gap: 1.25rem; }
-  .project-media { width: 100%; height: 180px; }
+  .section-card {
+    padding: 1rem;
+  }
 
-  /* Education/About: לוגו קטן ויישור אנכי */
-  /* .logo-img { max-width: 80px; height: 60px; } */
+  #projects {
+    padding: 1rem;
+  }
+
+  .projects-grid {
+    gap: 1.25rem;
+  }
+
+  .project-media-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-media {
+    width: 100%;
+    max-width: 320px;
+    height: 180px;
+    object-fit: cover;
+    transform: none;
+  }
+
   #education .logo-img,
   #certificates .logo-img {
     width: 72px !important;
     height: 72px !important;
     max-width: 72px !important;
     max-height: 72px !important;
-    margin-left: 0.5rem;
+    margin-left: .5rem;
   }
-  .about-container { display: grid; gap: 1rem; }
-  .profile-img { max-width: 240px; border-radius: 12px; }
 
-  /* טופס וכפתורים רחבים */
+  .about-container {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .profile-img {
+    max-width: 240px;
+    border-radius: 12px;
+  }
+
   #send-btn,
-  .download-btn { width: 100%; padding: 0.9rem 1rem; }
+  .download-btn {
+    width: 100%;
+    padding: .9rem 1rem;
+  }
 
-  .contact-note { font-size: 0.95rem; padding: 0.6rem 0.9rem; }
+  .contact-note {
+    font-size: .95rem;
+    padding: .6rem .9rem;
+  }
+
+  section {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
-/* ====== ≤ 480px (מובייל קטן) ====== */
+/* ===== Small Mobile ≤ 480px ===== */
 @media (max-width: 480px) {
-  .project-media { height: 160px; }
-  .skill-bubble { font-size: 0.9rem; padding: 0.35rem 0.7rem; }
-  body { line-height: 1.5; }
+  header.hero-header h1 {
+    font-size: 2.2rem;
+  }
+
+  header.hero-header .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .contact-bubble {
+    padding: 1rem;
+  }
+
+  .project-media {
+    height: 160px;
+  }
+
+  .skill-bubble {
+    font-size: .9rem;
+    padding: .35rem .7rem;
+  }
+
+  body {
+    line-height: 1.5;
+  }
+}
+
+/* Disable hover zoom on touch */
+@media (hover: none) {
+  .project-media:hover { transform: none; }
 }
